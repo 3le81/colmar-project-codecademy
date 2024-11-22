@@ -1,211 +1,221 @@
 html, body {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  background-color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-    background-color: lightgrey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    margin-left: 24px;
-  }
-  
-  .colmar, .academy {
-    font-size: 32px;
-    margin-left: 2px;
-  }
-  
-  .colmar {
-    color: #666;
-  }
-  
-  .academy {
-    color: #ccc;
-  }
-  
-  
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.colmar, .academy {
+  font-size: 32px;
+  margin-left: 2px;
+}
+
+.colmar {
+  color: #666;
+}
+
+.academy {
+  color: #ccc;
+}
+
+header {
+  height: 64px;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none; 
+  margin: 0 24px;
+}
+
+nav ul li {
+  margin-left: 16px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin-top: 32px;
+}
+
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
   header {
-    height: 64px;
-    background-color: whitesmoke;
-    width: 100%; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav {
-    display: flex;
-  }
-  
-  nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none; 
-    margin: 0 24px 0 24px;
-  }
-  
-  nav ul li {
-    margin-left: 16px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  main {
-    margin-top: 32px;
-  }
-
-
-
-  /* Styles for mobile devices */
-  @media (max-width: 768px) {
-    header {
       height: auto;
-    }
-  
-    nav ul {
+  }
+
+  nav ul {
       flex-direction: column;
       align-items: center;
-    }
-  
-    nav ul li {
+  }
+
+  nav ul li {
       margin: 10px 0;
-    }
   }
 
-
-  .learn, .text{
-    display: flex;
-    align-items: center;
-    margin-left: 24px;
+  .container {
+      grid-template-columns: 1fr;
   }
 
-
-  .learn img {
-    width : 60%;
-    margin: 32px 24px;
+  .three-photos {
+      flex-direction: column;
+      align-items: center;
   }
 
-
-  h1 {
-    color: #3f3f3f;
-    font-weight: bold;    
+  .photo-text-pair {
+      flex-direction: column;
+      align-items: center;
   }
 
-  p {
-    color: #3f3f3f;
-
+  .photo-text-pair img {
+      width: 100%;
   }
+}
+
+.learn, .text {
+  background-color: lightgray;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.learn img, .campus img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 32px 24px;
+}
+
+h1 {
+  color: #3f3f3f;
+  font-weight: bold;    
+}
+
+p {
+  color: #3f3f3f;
+}
 
 button {
-    background-color: #3f3f3f;
-    color: white;
-    width: 100%;
-    padding : 8px;
+  background-color: #3f3f3f;
+  color: white;
+  width: 100%;
+  padding: 8px;
 }
 
 /* Container for Main Content and Sidebar */
 .container {
-    display: grid;
-    grid-template-columns: 60% 35%;
-    gap: 16px;
-    margin: 32px;
+  display: grid;
+  grid-template-columns: 60% 35%;
+  gap: 16px;
+  margin: 0;
 }
 
 /* Main Content Styles */
-.campus {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
-.campus img {
-    width: 60%; 
-    height: auto;
-    margin: 32px 24px;
+.campus {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .campus-text {
-    margin-top: 16px;
-    margin-left: 24px;
+  margin-top: 16px;
+  margin-left: 24px;
 }
 
 .campus-text h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #3f3f3f;
+  margin: 0;
+  font-size: 24px;
+  color: #3f3f3f;
 }
 
 .campus-text p {
-    margin: 4px 0;
-    color: #3f3f3f;
+  margin: 4px 0;
+  color: #3f3f3f;
 }
 
 /* Sidebar Styles (Three Photos) */
 .three-photos {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 24px;
+
 }
 
 .photo-text-pair {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .photo-text-pair img {
-    width: 40%;
-    aspect-ratio: 4 / 3; /* Maintain consistent aspect ratio for images */
-    object-fit: cover; /* Fill the space while preserving aspect ratio */
+  width: 35%;
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
 }
 
 .text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .text h3 {
-    margin: 0;
-    font-size: 16px;
+  margin: 0;
+  font-size: 16px;
 }
 
 .text p {
-    margin: 4px 0;
-    font-size: 14px;
-    color: #3f3f3f;
+  margin: 4px 0;
+  font-size: 14px;
+  color: #3f3f3f;
 }
 
 .text a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 14px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
+.video-section {
+  margin: 32px 24px;
+}
 
-    .three-photos {
-        flex-direction: column;
-        align-items: center;
-    }
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 24px;
+}
 
-    .photo-text-pair {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer-links {
+  display: flex;
+}
 
-    .photo-text-pair img {
-        width: 100%;
-    }
+.footer-links a {
+  text-decoration: none;
+  margin-right: 10px;
 }
